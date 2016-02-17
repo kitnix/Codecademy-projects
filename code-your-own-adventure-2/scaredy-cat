@@ -1,0 +1,27 @@
+var user = prompt("You see a cat in the middle of an ally. Do you FEED it, SHOO it, or RUN from it?").toUpperCase();
+
+switch(user){
+    case 'FEED':
+        var food = prompt("do you have food on you? (YES or NO)").toUpperCase();
+        var catFood = prompt("Do you have any cat food on you? (YES or NO)").toUpperCase();
+        if(food === 'YES' || catFood === 'YES'){
+            console.log("You marvelous human, you. The cat purrs and nuzzles her head into your hand as a thank you.");
+        } else {
+            console.log("You tried and it was a good attempt. Since you don't have any food to give, you just pet the cat");
+        }
+        break;
+    case 'SHOO':
+        console.log("The cat hisses at your before scurrying into the shadows");
+        break;
+    case 'RUN':
+        var fast = prompt("are you fast? (YES or NO)").toUpperCase();
+        var scared = prompt("are you scared of cats? (YES or NO)").toUpperCase();
+        if(fast === 'NO' && scared === 'YES'){
+            console.log("You are the real scaredy cat here");
+        } else {
+            console.log("you walk away briskly while the cat stares at you curiously");
+        }
+        break;
+    default:
+        console.log("Please try again. Choose FEED, SHOO, or RUN");
+}
